@@ -30,5 +30,21 @@ makeXOGrid(3,2)
 makeXOGrid(3,3) 
 /
 [["X","O","X"],["O","X","O"],["X","O","X"]]
-//
+/
  */
+
+function makeXOGrid(rows, columns) {
+  let newArr = [];
+  for (let i = 0; i < rows; i++) {
+    let row = [];
+    for (let j = 1; j < columns + 1; j++) {
+      if (j % 2 == 0) {
+        row.push("O");
+      } else {
+        row.push("X");
+      }
+    }
+    newArr.push(row);
+  }
+  return newArr;
+}
