@@ -1,0 +1,23 @@
+let canvas = document.getElementById("my-canvas");
+console.log("width: ", canvas.width, "height: ", canvas.height);
+canvas.width = canvas.scrollWidth;
+canvas.height = canvas.scrollHeight;
+let ctx = canvas.getContext("2d");
+let upperLeftX = 0;
+let upperLeftY = 0;
+let width = 50;
+let height = 50;
+ctx.fillRect(upperLeftX, upperLeftY, width, height);
+ctx.fillStyle = "orange";
+ctx.fillRect(upperLeftX, upperLeftY, width, height);
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(40, 40);
+ctx.lineTo(0, 80);
+ctx.fill();
+ctx.closePath();
+/* var canvasWidth = 400;
+var canvasHeight = 400;
+ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+ */
